@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import moon from './moon.png';
 import land from './land.png';
 import cat from './cat.gif';
+import dog from './dog.gif';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -43,6 +44,13 @@ function App() {
           sticky={{ start: 0.9, end: 2.5 }}
           style={{ textAlign: 'center' }}
         >
+          <img src={dog} />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          sticky={{ start: 0.3, end: 2.5 }}
+          style={{ textAlign: 'left' }}
+        >
           <img src={cat} />
         </ParallaxLayer>
 
@@ -51,7 +59,7 @@ function App() {
           speed={0.05}
           onClick={() => ref.current.scrollTo(3)}
         >
-          <h2>Welcome to my website</h2>
+          <h2>Pups in Space</h2>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -59,7 +67,7 @@ function App() {
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
-          <h2>Hi Mom!</h2>
+          <h2>Woof!</h2>
         </ParallaxLayer>
       </Parallax>
     </div>
